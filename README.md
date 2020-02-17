@@ -1,2 +1,26 @@
-# luma-vue-mypoject1
-b站手把手撸码前端后台管理系统
+# my-project-luma
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
