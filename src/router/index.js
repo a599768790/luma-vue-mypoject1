@@ -8,9 +8,17 @@ export default new Router({
   routes: [
     {
       path: "/",
-      redirect: "Login"
-      // name: "home",
-      // component: Home
+      meta: {
+        name: "主页"
+      },
+      redirect: "Login",
+      name: "home",
+      component: () => import("@/views/Home.vue")
+    },
+    {
+      path: "/login",
+      name: "Login",
+      component: () => import("@/views/Login/Index.vue")
     },
     {
       path: "/about",
@@ -18,13 +26,7 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "@/views/About.vue")
-    },
-    {
-      path: "/login",
-      name: "Login",
-      component: () => import("@/views/Login/Index.vue")
+      component: () => import("@/views/About.vue")
     }
   ]
 });
