@@ -18,7 +18,6 @@
         <el-form
           ref="loginForm"
           :model="ruleForm"
-          label-width="80px"
           class="login-form"
           status-icon
         >
