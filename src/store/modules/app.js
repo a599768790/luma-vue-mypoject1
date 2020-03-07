@@ -7,7 +7,7 @@ import {
   getUserName
 } from "@/utils/app";
 const state = {
-  // isCollapse: JSON.parse(sessionStorage.getItem("isCollapse")) || false,
+  isCollapse: JSON.parse(sessionStorage.getItem("isCollapse")) || false,
   to_ken: "",
   username: getUserName() || ""
 };

@@ -9,6 +9,7 @@ export default new Router({
   routes: [
     {
       path: "/",
+      hidden: true,
       meta: {
         name: "主页"
       },
@@ -16,7 +17,11 @@ export default new Router({
     },
     {
       path: "/login",
-      name: "Login",
+      name: "login",
+      hidden: true,
+      meta: {
+        name: "登录"
+      },
       component: () => import("@/views/Login/Index.vue")
     },
     {
@@ -38,10 +43,25 @@ export default new Router({
           component: () => import("../views/Console/index.vue")
         }
       ]
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      // component: () => import("@/views/About.vue")
+    },
+    {
+      path: "/info",
+      name: "name",
+      meta: {
+        name: "信息管理",
+        icon: "info"
+      },
+      component: Layout,
+      children: [
+        {
+          path: "/infoindex",
+          name: "infoindex",
+          meta: {
+            name: "信息列表"
+          },
+          component: () => import("../views/Info/index.vue")
+        }
+      ]
     }
   ]
 });
